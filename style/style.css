@@ -1,0 +1,258 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: black;
+  flex-wrap: wrap;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  border-bottom: 2px solid rgb(28, 251, 232);
+  margin: 0px;
+}
+header nav ul li {
+  list-style-type: none;
+  padding: 1rem;
+}
+header nav ul li a {
+  font-size: 1.2rem;
+  color: #00ffc2;
+  text-decoration: none;
+  font-weight: bolder;
+}
+header nav ul li:hover {
+  border-bottom: 3px solid #ffffff;
+}
+
+main {
+  background-color: black;
+  padding: 10px;
+}
+main section.index {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../picture/捍衛民主.jpg");
+  background-size: cover;
+  position: relative;
+}
+main section.index div.Text h3 {
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 10;
+  font-size: 15vh;
+}
+
+.resume {
+  border-radius: 20px;
+  margin: 1.25rem;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  border-top: 1.5px solid black;
+}
+
+.intro {
+  line-height: 2rem;
+  width: 50%;
+}
+.intro ul,
+.intro ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.intro ul li,
+.intro ol li {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  font-weight: 900;
+}
+.intro ul li:hover,
+.intro ol li:hover {
+  background-color: rgba(131, 131, 131, 0.966);
+}
+
+.item {
+  margin-right: 5rem;
+  font-weight: 900;
+  border: 0px solid white;
+}
+
+.card_content {
+  align-items: center;
+}
+
+.img {
+  margin: 10px 0px;
+}
+.img img {
+  width: 100%;
+  height: 50vh;
+  -webkit-filter: blur(1px);
+}
+.img img:hover {
+  border-radius: 5px;
+  width: 100%;
+  height: 50vh;
+  -webkit-filter: drop-shadow(10px 10px rgba(51, 51, 51, 0.5529411765));
+}
+
+.skill,
+.profolio {
+  border-radius: 20px;
+  margin: 1.25rem;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+}
+.skill .content,
+.profolio .content {
+  margin-top: 2rem;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill .content ul,
+.profolio .content ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skill .content ul li,
+.profolio .content ul li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+.skill .content ul li h2,
+.profolio .content ul li h2 {
+  padding-top: 1rem;
+  font-weight: 700;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+.title h1,
+.title h2 {
+  font-weight: 800;
+}
+
+/*專業技能的圓圈圖*/
+.circle {
+  width: 180px;
+  height: 180px;
+  background-color: rgba(243, 240, 240, 0.873);
+  border-radius: 80%;
+  position: relative;
+  /*p90超過的要藏起來*/
+  overflow: hidden;
+}
+
+/*前面在 circle 裡面 增加一個 class p90*/
+.p90 {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background-color: #11e98f;
+}
+
+.p180 {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  /*距離左邊*/
+  left: 50%;
+  /*距離上方*/
+  top: 50%;
+  background-color: #11e98f;
+}
+
+.p270 {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-color: #11e98f;
+}
+
+/*自己練習 p360*/
+.circle::after {
+  content: "";
+  display: block; /*設定寬高*/
+  background-color: #ffffff;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+}
+
+.profolio .content ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profolio .content ul li {
+  margin: 1rem;
+}
+.profolio .content ul li img {
+  height: 16rem;
+  width: 22rem;
+}
+.profolio .content ul li h5 {
+  font-weight: 900;
+}/*# sourceMappingURL=style.css.map */
